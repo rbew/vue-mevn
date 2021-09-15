@@ -55,18 +55,21 @@ export default {
   },
   methods: {
     handleSubmitForm() {
-      let apiURL = 'http://localhot:4000/api/create-student'
+      let apiURL = 'http://localhost:4000/api/create-student'
 
-      axios.post(apiURL, this.student).then(() => {
-        this.$router.push('/view')
-        this.student = {
-          name: '',
-          email: '',
-          phone: ''
-        }
-      }).catch(error => {
-        console.log(error)
-      })
+      axios
+        .post(apiURL, this.student)
+        .then(() => {
+          this.$router.push('/view')
+          this.student = {
+            name: '',
+            email: '',
+            phone: '',
+          }
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     },
   },
 }
