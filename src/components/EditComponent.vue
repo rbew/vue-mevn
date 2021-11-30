@@ -62,7 +62,7 @@ export default {
       let apiURL = `http://localhost:4000/api/update-student/${this.$route.params.id}`
 
       axios
-        .put(apiURL, this.student)
+        .put(apiURL, this.student) // 总是无法更新数据，最后在这里找到错误 本应该是 put 但写成 post
         .then((res) => {
           console.log(res)
           this.$router.push('/view')
