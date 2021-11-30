@@ -1,3 +1,3 @@
 module.exports = {
-  db: 'mongodb://localhost:27017/vuecrudmevn',
+  db: 'mongodb+srv://root:ucb8iidZAFpNH0NJ@vue-mevn.v64n6.mongodb.net/vuw-mevn',
 }
