@@ -62,9 +62,8 @@ export default {
       let apiURL = `http://localhost:4000/api/update-student/${this.$route.params.id}`
 
       axios
-        .post(apiURL, this.student)
+        .put(apiURL, this.student)
         .then((res) => {
-          // or axios.post
           console.log(res)
           this.$router.push('/view')
         })

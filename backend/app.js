@@ -2,7 +2,6 @@ let express = require('express'),
   cors = require('cors'),
   mongoose = require('mongoose'),
   database = require('./database'),
-  bodyParser = require('body-parser'),
   createError = require('http-errors')
 
 // Connect mongoDB
@@ -23,10 +22,10 @@ mongoose
 
 const studentAPI = require('../backend/routes/student.route')
 const app = express()
-app.use(bodyParser.json())
+app.use(express.json())
 app.use(
-  bodyParser.urlencoded({
-    extended: false,
+  express.urlencoded({
+    extended: true,
   }),
 )
 app.use(cors())
