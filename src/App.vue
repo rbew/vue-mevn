@@ -2,25 +2,18 @@
   <div>
     <!-- Nav Bar -->
     <nav
-      class="
-        navbar navbar-dark
-        bg-primary
-        justify-content-between
-        flex-nowrap flex-row
-      "
+      class="navbar navbar-dark bg-primary justify-content-between flex-nowrap flex-row"
     >
       <div class="container">
-        <a class="navbar-brand float-left">Jim Gao's MEVN Stack</a>
+        <a class="navbar-brand float-left">学生信息管理系统</a>
         <ul class="nav navbar-nav flex-row float-right">
           <li class="nav-item">
-            <router-link class="nav-link pr-3" to="/">
-              Add Student
-            </router-link>
+            <router-link class="nav-link pr-3" to="/"> 添加学生 </router-link>
           </li>
           &nbsp;&nbsp;&nbsp;
           <li class="nav-item">
             <router-link class="nav-link" to="/view">
-              View Students
+              查看学生信息
             </router-link>
           </li>
         </ul>
