@@ -3,10 +3,13 @@ const Schema = mongoose.Schema
 
 let studentSchema = new Schema(
   {
+    sid: {
+      type: Number,
+    },
     name: {
       type: String,
     },
-    email: {
+    class: {
       type: String,
     },
     phone: {
@@ -15,7 +18,7 @@ let studentSchema = new Schema(
   },
   {
     collection: 'students',
-  },
+  }
 )
 
 module.exports = mongoose.model('Student', studentSchema)

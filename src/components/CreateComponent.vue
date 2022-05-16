@@ -2,10 +2,19 @@
   <div class="row justify-content-center">
     <div class="col-md-6">
       <!-- Contents -->
-      <h3 class="text-center">Create Student</h3>
+      <h3 class="text-center">添加学生信息</h3>
       <form @submit.prevent="handleSubmitForm">
         <div class="form-group">
-          <label>Name</label>
+          <label>学号</label>
+          <input
+            v-model="student.sid"
+            type="text"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label>姓名</label>
           <input
             v-model="student.name"
             type="text"
@@ -14,16 +23,16 @@
           />
         </div>
         <div class="form-group">
-          <label>Email</label>
+          <label>班级</label>
           <input
-            v-model="student.email"
-            type="email"
+            v-model="student.class"
+            type="text"
             class="form-control"
             required
           />
         </div>
         <div class="form-group">
-          <label>Phone</label>
+          <label>电话</label>
           <input
             v-model="student.phone"
             type="text"
@@ -33,7 +42,7 @@
         </div>
 
         <div class="form-group">
-          <button class="btn btn-danger btn-block">Create</button>
+          <button class="btn btn-danger btn-block">新建</button>
         </div>
       </form>
     </div>
@@ -47,23 +56,26 @@ export default {
   data() {
     return {
       student: {
+        sid: '',
         name: '',
-        email: '',
+        class: '',
         phone: '',
       },
     }
   },
   methods: {
     handleSubmitForm() {
-      let apiURL = 'http://localhost:4000/api/create-student'
+      const API_URL = process.env.API_URL
+      let apiURL = `http://${API_URL}/api/create-student`
 
       axios
         .post(apiURL, this.student)
         .then(() => {
           this.$router.push('/view')
           this.student = {
+            sid: '',
             name: '',
-            email: '',
+            class: '',
             phone: '',
           }
         })

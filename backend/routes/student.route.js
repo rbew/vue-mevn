@@ -4,16 +4,6 @@ const studentRoute = express.Router()
 // model
 let StudentModel = require('../models/Student')
 
-studentRoute.route('/create-student').post((req, res, next) => {
-  StudentModel.create(req.body, (error, data) => {
-    if (error) {
-      return next(error)
-    } else {
-      res.json(data)
-    }
-  })
-})
-
 studentRoute.route('/').get((req, res, next) => {
   StudentModel.find((error, data) => {
     if (error) {
@@ -24,6 +14,18 @@ studentRoute.route('/').get((req, res, next) => {
   })
 })
 
+// Add
+studentRoute.route('/create-student').post((req, res, next) => {
+  StudentModel.create(req.body, (error, data) => {
+    if (error) {
+      return next(error)
+    } else {
+      res.json(data)
+    }
+  })
+})
+
+// Edit
 studentRoute.route('/edit-student/:id').get((req, res, next) => {
   StudentModel.findById(req.params.id, (error, data) => {
     if (error) {

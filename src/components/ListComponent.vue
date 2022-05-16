@@ -4,28 +4,30 @@
       <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Actions</th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>班级</th>
+            <th>电话</th>
+            <th>操作</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="student in Students" :key="student._id">
+            <td>{{ student.sid }}</td>
             <td>{{ student.name }}</td>
-            <td>{{ student.email }}</td>
+            <td>{{ student.class }}</td>
             <td>{{ student.phone }}</td>
             <td>
               <router-link
                 :to="{ name: 'edit', params: { id: student._id } }"
                 class="btn btn-success"
-                >Edit
+                >修改
               </router-link>
               <button
                 class="btn btn-danger"
                 @click.prevent="deleteStudent(student._id)"
               >
-                Delete
+                删除
               </button>
             </td>
           </tr>
@@ -38,6 +40,8 @@
 <script>
 import axios from 'axios'
 
+const API_URL = process.env.API_URL
+
 export default {
   data() {
     return {
@@ -45,7 +49,7 @@ export default {
     }
   },
   created() {
-    let apiURL = 'http://localhost:4000/api'
+    let apiURL = `http://${API_URL}/api`
     axios
       .get(apiURL)
       .then((res) => {
@@ -57,7 +61,7 @@ export default {
   },
   methods: {
     deleteStudent(id) {
-      let apiURL = `http://localhost:4000/api/delete-student/${id}`
+      let apiURL = `http://${API_URL}/api/delete-student/${id}`
       let indexOfArrayItem = this.Students.findIndex((i) => i._id === id)
 
       if (window.confirm('Do you really want to delete?')) {

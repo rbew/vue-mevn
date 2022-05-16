@@ -1,8 +1,9 @@
-let express = require('express'),
+const express = require('express'),
   cors = require('cors'),
   mongoose = require('mongoose'),
   database = require('./database'),
-  createError = require('http-errors')
+  createError = require('http-errors'),
+  port = process.env.PORT || 4000
 
 // Connect mongoDB
 mongoose.Promise = global.Promise
@@ -20,8 +21,11 @@ mongoose
     },
   )
 
-const studentAPI = require('../backend/routes/student.route')
+const studentAPI = require('./routes/student.route')
+const userAPI = require('./routes/user.route')
+
 const app = express()
+
 app.use(express.json())
 app.use(
   express.urlencoded({
@@ -32,9 +36,9 @@ app.use(cors())
 
 // API
 app.use('/api', studentAPI)
+app.use('/user', userAPI)
 
 // Create port
-const port = process.env.PORT || 4000
 app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
