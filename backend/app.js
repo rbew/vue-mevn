@@ -9,8 +9,12 @@ const express = require('express'),
 mongoose.Promise = global.Promise
 mongoose
   .connect(database.db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    /**
+     * https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options
+     
+    useNewUrlParser: true, <-- no longer necessary
+    useUnifiedTopology: true, <-- no longer necessary
+    */
   })
   .then(
     () => {

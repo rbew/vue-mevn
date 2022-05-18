@@ -3,18 +3,10 @@ const Schema = mongoose.Schema
 
 let studentSchema = new Schema(
   {
-    sid: {
-      type: Number,
-    },
-    name: {
-      type: String,
-    },
-    class: {
-      type: String,
-    },
-    phone: {
-      type: Number,
-    },
+    sid: Number,
+    name: String,
+    class: String,
+    phone: Number,
   },
   {
     collection: 'students',

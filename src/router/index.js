@@ -26,17 +26,23 @@ const routes = [
   {
     path: '/create',
     name: 'create',
-    component: () => import('../components/CreateComponent'),
+    component: () => import('../components/CreateStudentComponent'),
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/view',
     name: 'view',
-    component: () => import('../components/ListComponent'),
+    component: () => import('../components/ListStudentComponent'),
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/edit/:id',
     name: 'edit',
-    component: () => import('../components/EditComponent'),
+    component: () => import('../components/EditStudentComponent'),
   },
 ]
 
