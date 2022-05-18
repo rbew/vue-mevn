@@ -25,7 +25,7 @@
               type="text"
               id="userid"
               class="form-control mb-5"
-              placeholder="工号/学号"
+              placeholder="job number/student number"
               v-model="register.userid"
               required
             />

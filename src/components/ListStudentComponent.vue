@@ -60,23 +60,29 @@
           </tbody>
         </table>
       </div>
-      <p>
+      <!-- <p>
         <Button color="blue" icon="h-icon-plus" @click="add(datas)"
           >Add a line</Button
         >
       </p>
-      <Table :datas="datas" stripe checkbox>
-        <TableItem title="学号" prop="$index"></TableItem>
-        <TableItem title="姓名" prop="$serial"></TableItem>
-        <TableItem title="班级" prop="name" sort="auto"></TableItem>
-        <TableItem title="电话" prop="age"></TableItem>
+      <Table :datas="Students" stripe checkbox>
+        <TableItem title="学号" prop="sid"></TableItem>
+        <TableItem title="姓名" prop="name"></TableItem>
+        <TableItem title="班级" prop="class" sort="auto"></TableItem>
+        <TableItem title="电话" prop="phone"></TableItem>
         <TableItem title="操作">
-          <template slot-scope="{ data }">
-            {{ data.name }}: Custom display
+          <template slot-scope="{ student }">
+            
+            <button
+              class="btn btn-danger"
+              @click="deleteStudent(student._id)"
+            >
+              删除
+            </button>
           </template>
         </TableItem>
         <div slot="empty">Custom reminder: no data at this time</div>
-      </Table>
+      </Table> -->
     </div>
   </div>
 </template>
@@ -88,14 +94,6 @@ export default {
   data() {
     return {
       Students: [],
-      datas: [
-        { id: 5, name: 'test 5', age: 12, address: 'Shanghai' },
-        { id: 6, name: 'test 6', age: 13, address: 'Shanghai' },
-        { id: 7, name: 'test 7', age: 14, address: 'Shanghai' },
-        { id: 5, name: 'test 5', age: 15, address: 'Shanghai' },
-        { id: 6, name: 'test 6', age: 16, address: 'Shanghai' },
-        { id: 7, name: 'test 7', age: 17, address: 'Shanghai' }
-      ]
     }
   },
   created() {
@@ -129,9 +127,6 @@ export default {
       localStorage.removeItem('jwt')
       this.$router.push('/')
     },
-    add(datas) {
-      datas.push({ id: 7, name: 'Add to', age: 12, address: 'Then added' });
-    }
   },
 }
 </script>

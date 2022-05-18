@@ -42,7 +42,7 @@
             />
 
             <p>
-              还没有账户吗？<router-link to="/register">点这里注册</router-link>
+              还没有账户吗？<router-link to="/register" class="link-primary">点这里注册</router-link>
             </p>
 
             <!-- Sign in button -->

@@ -43,6 +43,9 @@ const routes = [
     path: '/edit/:id',
     name: 'edit',
     component: () => import('../components/EditStudentComponent'),
+    meta: {
+      requiresAuth: true
+    }
   },
 ]
 
