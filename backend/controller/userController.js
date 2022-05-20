@@ -6,7 +6,7 @@ exports.registerNewUser = async (req, res) => {
     console.log(isUser)
     if (isUser.length >= 1) {
       return res.status(409).json({
-        message: 'you already registered',
+        message: '你已经注册了',
       })
     }
     const user = new User({
@@ -29,7 +29,7 @@ exports.loginUser = async (req, res) => {
     if (!user) {
       return res
         .status(401)
-        .json({ error: 'Login failed! Check authentication credentials' })
+        .json({ error: '  登录失败，请检查帐号和密码是否输入正确！' })
     }
     const token = await user.generateAuthToken()
     res.status(201).json({ user, token })

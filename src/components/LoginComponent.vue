@@ -87,7 +87,7 @@ export default {
         }
       } catch (err) {
         Swal.fire({
-          title: '一些事情出错了',
+          title: '当前账户未注册',
           icon: 'error',
         })
         console.log(err.response)
