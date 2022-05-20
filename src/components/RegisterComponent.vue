@@ -38,6 +38,7 @@
               class="form-control mb-5"
               placeholder="Password"
               v-model="register.password"
+              required
             />
             <p>
               已经拥有账户？<router-link to="/">点这里登录</router-link>

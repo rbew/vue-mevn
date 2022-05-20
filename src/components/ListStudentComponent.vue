@@ -4,7 +4,7 @@
       class="navbar navbar-dark bg-primary justify-content-between flex-nowrap flex-row"
     >
       <div class="container">
-        <a class="navbar-brand float-left" href="/">学生信息管理系统</a>
+        <a class="navbar-brand float-left" href="/home">学生信息管理系统</a>
         <ul class="nav navbar-nav flex-row float-right">
           <li class="nav-item">
             <router-link class="nav-link pr-3" to="/create"
@@ -27,7 +27,7 @@
 
     <div class="container mt-5 ms-6">
       <div class="col-md-12">
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered">
           <thead class="thead-dark">
             <tr>
               <th>学号</th>
@@ -60,29 +60,6 @@
           </tbody>
         </table>
       </div>
-      <!-- <p>
-        <Button color="blue" icon="h-icon-plus" @click="add(datas)"
-          >Add a line</Button
-        >
-      </p>
-      <Table :datas="Students" stripe checkbox>
-        <TableItem title="学号" prop="sid"></TableItem>
-        <TableItem title="姓名" prop="name"></TableItem>
-        <TableItem title="班级" prop="class" sort="auto"></TableItem>
-        <TableItem title="电话" prop="phone"></TableItem>
-        <TableItem title="操作">
-          <template slot-scope="{ student }">
-            
-            <button
-              class="btn btn-danger"
-              @click="deleteStudent(student._id)"
-            >
-              删除
-            </button>
-          </template>
-        </TableItem>
-        <div slot="empty">Custom reminder: no data at this time</div>
-      </Table> -->
     </div>
   </div>
 </template>

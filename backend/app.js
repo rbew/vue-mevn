@@ -49,7 +49,7 @@ app.listen(port, () => {
 
 // Find 404
 app.use((req, res, next) => {
-  next(createError(404))
+  next(createError(404, 'Please login to view this page.'))
 })
 
 // error handler

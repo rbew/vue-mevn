@@ -32,6 +32,14 @@
           查看所有学生信息 </router-link
         >，并修改。
       </p>
+      <p>当前登陆用户：</p>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-group">
+            <li class="list-group-item">学号/工号：{{ user.userid }}</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
 </template>
