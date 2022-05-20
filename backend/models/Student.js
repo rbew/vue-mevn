@@ -7,6 +7,8 @@ let studentSchema = new Schema(
     name: String,
     class: String,
     phone: Number,
+    addr: String,
+    id_card: String
   },
   {
     collection: 'students',

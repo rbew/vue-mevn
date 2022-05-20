@@ -25,7 +25,7 @@
       </div>
     </nav>
 
-    <div class="row justify-content-center mt-3 ">
+    <div class="row justify-content-center mt-3">
       <div class="col-md-6">
         <!-- Contents -->
         <h3 class="text-center">添加学生信息</h3>
@@ -66,6 +66,24 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label>生源地</label>
+            <input
+              v-model="student.addr"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>身份证号</label>
+            <input
+              v-model="student.id_card"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
 
           <div class="form-group mt-3 text-center">
             <button class="btn btn-danger btn-block">新建</button>
@@ -87,6 +105,8 @@ export default {
         name: '',
         class: '',
         phone: '',
+        addr: '',
+        id_card: '',
       },
     }
   },
@@ -103,6 +123,8 @@ export default {
             name: '',
             class: '',
             phone: '',
+            addr: '',
+            id_card: '',
           }
         })
         .catch((error) => {

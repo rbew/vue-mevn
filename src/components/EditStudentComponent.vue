@@ -65,6 +65,24 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label>生源地</label>
+            <input
+              v-model="student.addr"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>身份证号</label>
+            <input
+              v-model="student.id_card"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
 
           <div class="form-group mt-3 text-center">
             <button class="btn btn-danger btn-block">修改</button>

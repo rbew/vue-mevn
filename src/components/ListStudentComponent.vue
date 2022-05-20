@@ -34,6 +34,8 @@
               <th>姓名</th>
               <th>班级</th>
               <th>电话</th>
+              <th>生源地</th>
+              <th>身份证号</th>
               <th>操作</th>
             </tr>
           </thead>
@@ -43,6 +45,8 @@
               <td>{{ student.name }}</td>
               <td>{{ student.class }}</td>
               <td>{{ student.phone }}</td>
+              <td>{{ student.addr }}</td>
+              <td>{{ student.id_card }}</td>
               <td>
                 <router-link
                   :to="{ name: 'edit', params: { id: student._id } }"
