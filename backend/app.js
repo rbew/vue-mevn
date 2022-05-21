@@ -40,7 +40,6 @@ app.use(cors())
 
 // API
 app.use('/api', [studentAPI, userAPI])
-app.use('/user', userAPI)
 
 // Create port
 app.listen(port, () => {
