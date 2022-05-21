@@ -8,7 +8,7 @@
 
 ## 未完成且想完成
 
-1. 用 sweetalert 代替 window.confirm
+1. 用 sweetalert2 代替 window.confirm
 2. 响应式布局（PC + Mobile）
 3. 按班级筛选学生
 4. 不能在 heyui 组件内部使用
