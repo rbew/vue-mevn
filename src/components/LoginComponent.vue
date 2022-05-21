@@ -73,7 +73,7 @@ export default {
     async loginUser() {
       try {
         let response = await this.axios.post(
-          'http://localhost:4000/user/login',
+          'http://localhost:4000/api/login',
           this.login
         )
         let token = response.data.token

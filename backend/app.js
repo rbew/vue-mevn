@@ -39,7 +39,7 @@ app.use(
 app.use(cors())
 
 // API
-app.use('/api', studentAPI)
+app.use('/api', [studentAPI, userAPI])
 app.use('/user', userAPI)
 
 // Create port

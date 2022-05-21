@@ -95,6 +95,7 @@
 
 <script>
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default {
   data() {
@@ -122,6 +123,10 @@ export default {
         .catch((error) => {
           console.log(error)
         })
+      Swal.fire({
+        title: '信息更新成功',
+        icon: 'success',
+      })
     },
     logUserOut() {
       localStorage.removeItem('jwt')

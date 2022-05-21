@@ -29,7 +29,7 @@ exports.loginUser = async (req, res) => {
     if (!user) {
       return res
         .status(401)
-        .json({ error: '  登录失败，请检查帐号和密码是否输入正确！' })
+        .json({ error: '登录失败，请检查帐号和密码是否输入正确！' })
     }
     const token = await user.generateAuthToken()
     res.status(201).json({ user, token })
