@@ -38,6 +38,7 @@
               class="form-control mb-5"
               placeholder="Password"
               v-model="login.password"
+              autocomplete="on"
               required
             />
 
