@@ -93,7 +93,7 @@ export default {
       let apiURL = `http://localhost:4000/api/delete-student/${id}`
       let indexOfArrayItem = this.Students.findIndex((i) => i._id === id)
 
-      if (window.confirm('确认删除？')) {
+      if (window.confirm('确认删除该名学生信息？')) {
         axios
           .delete(apiURL)
           .then(() => {

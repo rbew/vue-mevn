@@ -24,7 +24,6 @@
               type="text"
               id="userid"
               class="form-control mb-5"
-              placeholder="User Id"
               v-model="login.userid"
               required
             />
@@ -36,7 +35,6 @@
               type="password"
               id="password"
               class="form-control mb-5"
-              placeholder="Password"
               v-model="login.password"
               autocomplete="on"
               required

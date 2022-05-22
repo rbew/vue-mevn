@@ -25,7 +25,6 @@
                             type="text"
                             id="userid"
                             class="form-control mb-5"
-                            placeholder="job number/student number"
                             v-model="register.userid"
                             required
                         />
@@ -36,7 +35,6 @@
                             type="password"
                             id="password"
                             class="form-control mb-5"
-                            placeholder="Password"
                             v-model="register.password"
                             minlength="8"
                             required
@@ -99,9 +97,15 @@ export default {
             } catch (err) {
                 let error = err.response
                 if (error.status == 409) {
-                    Swal.fire('Error', error.data.message, 'error')
+                    Swal.fire({
+                        title: error.data.message,
+                        icon: 'error',
+                    })
                 } else {
-                    Swal.fire('Error', error.data.err.message, 'error')
+                    Swal.fire({
+                        title: error.data.err.message,
+                        icon: 'error',
+                    })
                 }
             }
         },
