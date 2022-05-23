@@ -1,0 +1,38 @@
+.
+├── babel.config.js
+├── backend
+│  ├── app.js
+│  ├── auth
+│  │  └── index.js
+│  ├── controller
+│  │  └── userController.js
+│  ├── database.js
+│  ├── models
+│  │  ├── Student.js
+│  │  └── User.js
+│  ├── package.json
+│  └── routes
+│     ├── student.route.js
+│     └── user.route.js
+├── jsconfig.json
+├── package.json
+├── public
+│  ├── favicon.ico
+│  └── index.html
+├── README.md
+├── sims-structue.txt
+├── src
+│  ├── App.vue
+│  ├── assets
+│  │  └── logo.png
+│  ├── components
+│  │  ├── CreateStudentComponent.vue
+│  │  ├── EditStudentComponent.vue
+│  │  ├── HomeComponent.vue
+│  │  ├── ListStudentComponent.vue
+│  │  ├── LoginComponent.vue
+│  │  └── RegisterComponent.vue
+│  ├── main.js
+│  └── router
+│     └── index.js
+└── yarn.lock

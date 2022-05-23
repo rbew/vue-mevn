@@ -2,9 +2,9 @@
 
 ## 功能实现
 
-- [x] 注册登录
-- [x] 仅登录可访问页面 restrict access to page
-- [x] 提供数据接口：`http://localhost:4000/api`
+-   [x] 注册登录
+-   [x] 仅登录可访问页面 restrict access to page
+-   [x] 提供数据接口：`http://localhost:4000/api`
 
 ## 未完成且想完成
 

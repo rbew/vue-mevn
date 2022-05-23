@@ -77,7 +77,7 @@ export default {
             try {
                 let response = await this.axios.post(
                     'http://localhost:4000/api/register',
-                    this.register
+                    this.register,
                 )
                 console.log(response)
                 let token = response.data.token

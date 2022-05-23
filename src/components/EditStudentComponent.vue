@@ -95,7 +95,9 @@
                     </div>
 
                     <div class="form-group mt-3 text-center">
-                        <button class="btn btn-danger btn-block" type="submit">修改</button>
+                        <button class="btn btn-danger btn-block" type="submit">
+                            修改
+                        </button>
                     </div>
                 </form>
             </div>

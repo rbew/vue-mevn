@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "prettier --write ."
   },
   "workspaces": [
     "backend"
@@ -31,6 +31,7 @@
     "@vue/compiler-sfc": "^3.2.33",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.7.1",
+    "prettier": "^2.6.2",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {

@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
+    <div>
+        <router-view></router-view>
+    </div>
 </template>
 <style>
 a.nav-link {
-  cursor: pointer;
+    cursor: pointer;
 }
 </style>
