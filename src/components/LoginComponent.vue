@@ -47,7 +47,10 @@
                                 >点这里注册</router-link
                             >
                         </p>
-
+                        
+                        <p>
+测试账号：1803030202；密码：1803030202
+                        </p>
                         <!-- Sign in button -->
                         <center>
                             <button
